@@ -6,11 +6,7 @@ import glob, os
 
 csv_file = str(input("What is the file?"))
 
-output_file = str(input("What is the name of the xlsx output file (has to be created)?"))
-
-step = float(input("What is the step?"))
-
-min_ = float(input("What is min value?"))
+output_file = str(input("What is the name of the output file?"))
 
 xl_file = csv_file + ".xlsx"
 
@@ -62,21 +58,11 @@ while t < len(listl2):
 
     t += 1
 
-t = 0
-
 t2 = 1
 
 w = load_workbook(output_file)
 
 sheet = w.active
-
-while t < len(listl3):
-
-    sheet.cell(row=t+1, column=1).value = min_
-
-    min_ += step
-
-    t += 1
 
 t = 1
 
