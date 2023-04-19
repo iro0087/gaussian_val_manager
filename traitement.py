@@ -6,7 +6,7 @@ import glob, os
 
 csv_file = str(input("What is the file?"))
 
-output_file = str(input("What is the name of the output file?"))
+output_file = str(input("What is the name of the output file (must be xlsx)?"))
 
 xl_file = csv_file + ".xlsx"
 
