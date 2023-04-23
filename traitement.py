@@ -6,7 +6,7 @@ import glob, os
 
 csv_file = str(input("What is the file?"))
 
-output_file = str(input("What is the name of the output file (must be xlsx file extension)?"))
+output_file = str(input("What is the name of the output file?"))
 
 xl_file = csv_file + ".xlsx"
 
@@ -17,6 +17,8 @@ w = load_workbook(xl_file)
 sheet = w.active
 
 cc = int(input("What is the column ?"))
+
+round_ = int(input("What is the round value?"))
 
 listl = []
 
@@ -38,7 +40,7 @@ t = 1
 
 while min(listl) != max(listl):
 
-    listl2.append(min(listl))
+    listl2.append(round(min(listl), round_))
 
     listl[listl.index(min(listl))] = max(listl)
 
